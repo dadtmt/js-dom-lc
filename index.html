@@ -15,14 +15,23 @@
   </head>
   <body>
     <p id="clickable_text">Click me !!!</p>
-    <div class="box">Hidden content</div>
+    <div id="hidden_box" class="box">Hidden content</div>
     <script>
+      // function to show the box
+      const showBox = () => {
+        console.log("showbox function");
+        const hiddenBox = document.getElementById("hidden_box");
+        if (hiddenBox.style.display !== "block") {
+          hiddenBox.style.display = "block";
+        } else {
+          hiddenBox.style.display = "none";
+        }
+      };
+
       console.log("Start JS program");
       // Get the element with clickable_text id
       const clickableTextElem = document.getElementById("clickable_text");
-      clickableTextElem.addEventListener("click", () => {
-        console.log("clicked!!!");
-      });
+      clickableTextElem.addEventListener("click", showBox);
     </script>
   </body>
 </html>

@@ -8,3 +8,5 @@ Just a starting demo on How to use js with DOM
 - add a script tag before closing body tag
 - get the clickable Text Element
 - add a click event listener
+- write and test a showBox function
+- call the function on click event
