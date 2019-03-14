@@ -10,3 +10,5 @@ Just a starting demo on How to use js with DOM
 - add a click event listener
 - write and test a showBox function
 - call the function on click event
+
+## Starts only when dom is ready
