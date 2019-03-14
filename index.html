@@ -16,6 +16,7 @@
   <body>
     <p id="clickable_text">Click me !!!</p>
     <div id="hidden_box" class="box">Hidden content</div>
+    <ul id="shopping_list"></ul>
     <script>
       // function to show the box
       const showBox = () => {
@@ -28,12 +29,43 @@
         }
       };
 
+      // Shopping List
+      const items = [
+        {
+          name: "Tomatoes",
+          quantity: 5
+        },
+        {
+          name: "Potatoes",
+          quantity: 3
+        },
+        {
+          name: "Eggs",
+          quantity: 12
+        },
+        {
+          name: "Milk",
+          quantity: 2
+        },
+        {
+          name: "Mangoes",
+          quantity: 3
+        }
+      ];
+
       // Start the program when the dom is ready
       document.addEventListener("DOMContentLoaded", () => {
-        console.log("Start JS program");
         // Get the element with clickable_text id
         const clickableTextElem = document.getElementById("clickable_text");
         clickableTextElem.addEventListener("click", showBox);
+
+        // Get the element with shopping_list id
+        const shoppingListElem = document.getElementById("shopping_list");
+        let htmlForLiElems = "";
+        for (let i = 0; i < items.length; i++) {
+          htmlForLiElems += `<li>${items[i].quantity} ${items[i].name}</li>`;
+        }
+        shoppingListElem.innerHTML = htmlForLiElems;
       });
     </script>
   </body>
