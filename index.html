@@ -28,10 +28,13 @@
         }
       };
 
-      console.log("Start JS program");
-      // Get the element with clickable_text id
-      const clickableTextElem = document.getElementById("clickable_text");
-      clickableTextElem.addEventListener("click", showBox);
+      // Start the program when the dom is ready
+      document.addEventListener("DOMContentLoaded", () => {
+        console.log("Start JS program");
+        // Get the element with clickable_text id
+        const clickableTextElem = document.getElementById("clickable_text");
+        clickableTextElem.addEventListener("click", showBox);
+      });
     </script>
   </body>
 </html>
